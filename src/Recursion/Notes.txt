@@ -1,4 +1,0 @@
-1.Pick/Non Pick Usecase
-Eg. Find all subsets
-2. Just pick and increment index when we want something contiguous
-Eg. Find all subarrays

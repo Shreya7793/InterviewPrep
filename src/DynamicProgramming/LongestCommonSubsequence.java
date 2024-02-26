@@ -3,10 +3,6 @@ package DynamicProgramming;
 import java.util.Arrays;
 
 /*
-For eg:
-
-Strings like “cab”,” bc” will not be called as a subsequence of “abc” as the characters are not coming in the same order.
-Note: For a string of length n, the number of subsequences will be 2n.
 Solution: https://www.youtube.com/watch?v=-zI4mrF2Pb4&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=28
 Ref: https://takeuforward.org/data-structure/longest-common-subsequence-dp-25/
 TC: Recursion: O(2^n * 2^m) for both the strings
