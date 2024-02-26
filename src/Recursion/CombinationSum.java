@@ -35,6 +35,7 @@ public class CombinationSum {
         }
         if(arr[index]<=target){
             combinationList.add(arr[index]);
+            //move to next index
             combinationSum2(index+1, target-arr[index],arr,combinationList,combinationListSet);
             combinationList.remove(combinationList.size()-1);
         }
