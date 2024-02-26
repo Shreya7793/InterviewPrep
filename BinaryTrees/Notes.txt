@@ -1,0 +1,24 @@
+1. Full BT: has 0 or 2 childeren
+2. Complete BT:
+    All levels are completely filled.
+    The last level has all nodes in the left.
+3. Perfect BT:
+    All leaf nodes are at the same level
+4. Balanced BT:
+    Height of the tree at max log(N) , where N is the number of nodes
+    For every node, height(left tree)-height(right tree) <= 1
+ 5. Degenerate Trees:
+    Skewed BT; in single line like linked list
+
+ DFS:
+ 1. Preorder - Root Left Right
+ 2. PostOrder - Left Right Root
+ 3. Inorder - Left Root Right
+
+ In general BT height is logN
+
+Diameter of a Binary Tree:
+1. Longest Path between two nodes
+2. Path doesn't need to pass via root
+
+

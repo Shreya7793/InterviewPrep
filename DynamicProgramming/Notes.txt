@@ -1,0 +1,13 @@
+1. In all DP problems on subsequences -> we'll have two ways : take & not take
+
+2. In problems which has infinite supplies(can be used any number of times)
+eg coin ; do not reduce the index in pick/take situation.
+
+3.How to think of base case?
+A. Since we are writing the recursion from n-1 to 0
+We write the base case for ind==0
+
+4. To find all possible ways.
+return (way1) + (way2) + ... => sum of all ways
+Eg:
+Count Ways To Reach The N-th Stairs -> f(n-1)+f(n-2)
