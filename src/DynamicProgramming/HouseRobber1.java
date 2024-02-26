@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 /*
 Max sum of Non-adjacent elements
+Problem Statement: Given an array of ‘N’  positive integers, we need to return the maximum sum of the subsequence
+such that no two elements of the subsequence are adjacent elements in the array.
+Hint: subsequence => pick /not pick
 Problem Link: https://takeuforward.org/data-structure/maximum-sum-of-non-adjacent-elements-dp-5/
 Video Link: https://www.youtube.com/watch?v=fJaKO8FbDdo&t=1s
 houseRobberWithRecursion= TC=~O(2^N)
