@@ -17,7 +17,8 @@ public class CheckIdenticalTree {
         boolean leftCheck = checkIdenticalTree(node1.left, node2.left);
         boolean rightCheck = checkIdenticalTree(node1.right, node2.right);
 
-        //This is same as preorder traversal - data, left, right
+        //This is same as preorder traversal - data, left, right => we do the preorder traversal for the two trees
+        //so that we visit them at the same time. Wer can do any traversal.
         return (node1.data==node2.data) && leftCheck && rightCheck;
     }
 

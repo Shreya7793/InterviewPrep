@@ -1,7 +1,5 @@
 package BinaryTrees;
 
-import javax.swing.tree.TreeCellRenderer;
-
 public class TreeNode {
     int data;
     TreeNode left;

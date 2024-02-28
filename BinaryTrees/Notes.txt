@@ -10,10 +10,17 @@
  5. Degenerate Trees:
     Skewed BT; in single line like linked list
 
- DFS:
+ DFS Traversal:
  1. Preorder - Root Left Right
  2. PostOrder - Left Right Root
- 3. Inorder - Left Root Right
+ 3. Inorder - Left Root Right ; NOTE: Inorder traversal of a BST is always sorted.
+ Level-order Traversal:
+ ZigZag Travesal: Level-order travesal with flag to reverse direction
+
+ Any traversal will take O(N), where N is the number of nodes
+
+ To get the leaf nodes- use any travesal and check of left and right are null.
+ Naturally use postorder, since it prints the leaf nodes first
 
  In general BT height is logN
 

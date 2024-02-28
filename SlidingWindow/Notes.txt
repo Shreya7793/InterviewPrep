@@ -1,0 +1,20 @@
+Q. Sliding wind types?
+Fixed Window
+Dynamic sliding window is also called as two-pointer approach.
+Q.How to identify questions?
+Hint 1: Elements should be continuous/in sequence
+Eg: list, string, subarray,
+Hint 2: We are trying to achieve a state
+Maximise, miminise, largest, smallest
+
+Note this return technique:
+return minLength == Integer.MAX_VALUE ? 0 : minLength;
+
+Prefix sum technique:
+Used for finding any subarray target sum
+Use Hashmap<K,V> : <sum,index> -> here sum is prefix sum or cumiliative sum
+
+Edge Cases:
+Empty String, null value
+Integer value =0 or > length of string
+

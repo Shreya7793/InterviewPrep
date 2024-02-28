@@ -2,3 +2,4 @@
 Eg. Find all subsets
 2. Just pick and increment index when we want something contiguous
 Eg. Find all subarrays
+Note: Use sliding window for Sub-Array problems
