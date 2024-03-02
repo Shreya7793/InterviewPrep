@@ -3,8 +3,9 @@ package Recursion;
 import java.util.ArrayList;
 import java.util.List;
 /*
-*
-* */
+*Since there are n characters in the string, there will be 2^n
+  possible combinations of including or excluding each character.
+ */
 public class PrintAllSubsequence {
     static void arrPrint(int index, int[] arr, List<Integer> arrSubsequeceList){
         if(index==arr.length) {

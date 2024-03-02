@@ -1,0 +1,4 @@
+Edge Case:
+1. if (nums == null || nums.length == 0) {
+               return 0;
+           }

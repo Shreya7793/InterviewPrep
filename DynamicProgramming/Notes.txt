@@ -11,3 +11,6 @@ We write the base case for ind==0
 return (way1) + (way2) + ... => sum of all ways
 Eg:
 Count Ways To Reach The N-th Stairs -> f(n-1)+f(n-2)
+
+5. Tabulation:
+(bottom-up dynamic programming) to ensure that we compute the values for smaller subproblems before larger ones

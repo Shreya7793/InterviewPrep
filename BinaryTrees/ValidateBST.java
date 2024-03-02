@@ -30,8 +30,6 @@ public class ValidateBST {
         return isValidLeftNode && isValidRightNode;
     }
     public static void main(String []args) {
-        List<Integer> traversalList = new ArrayList<>();
-        int k = 2;
         TreeNode root = new TreeNode(5);
         root.left = new TreeNode(3);
         root.right = new TreeNode(6);

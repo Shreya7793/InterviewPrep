@@ -1,0 +1,1 @@
+Note the MUTEX lock in publisher subscriber.
