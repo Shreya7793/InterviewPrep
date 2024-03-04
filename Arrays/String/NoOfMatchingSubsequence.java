@@ -41,6 +41,7 @@ public class NoOfMatchingSubsequence {
 
         return count;
     }
+    //use map -> index list is the key
     static boolean isSubsequence(String word, Map<Character, List<Integer>> sCharIndexMap){
         int prevIndex=-1;
         for(int i=0;i<word.length();i++){

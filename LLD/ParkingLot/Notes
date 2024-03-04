@@ -1,0 +1,45 @@
+Functional Requirements;
+1. The parking lot should have multiple floors where customers can park their cars.
+2. Customers can collect a parking ticket from the entry points and can pay the parking fee at the exit points on their way out.
+3. Customers can pay via both cash and credit cards.
+4. The system should not allow more vehicles than the maximum capacity of the parking lot.
+If the parking is full, the system should be able to show a message at the entrance panel and on the parking display board on the ground floor.
+5. Each parking floor will have many parking spots.
+The system should support multiple types of parking spots such as Compact, Large, Handicapped, Motorcycle, etc.
+6. The system should support parking for different types of vehicles like car, truck, van, motorcycle, etc.
+7. Each parking floor should have a display board showing any free parking spot for each spot type.
+8. The system should support a per-hour parking fee model.
+For example, customers have to pay $4 for the first hour, $3.5 for the second and third hours, and $2.5 for all the remaining hours.
+
+Non-Functional Requirements:
+1. Scalability: The system should be scalable to accommodate an increasing number of
+vehicles and parking spots without compromising performance or functionality
+2. Maintainability: The system should be easy to maintain, with modular components,
+clear documentation, and support for troubleshooting and debugging.
+3. Accessibility: The parking lot facilities should be accessible to people with disabilities,
+with designated parking spots, ramps, and other accessibility features.
+4. Reliability: The system should be reliable and available 24/7, with minimal downtime
+for maintenance or upgrades.
+5. Availability: The parking lot system should have high availability to ensure that customers
+can access parking facilities whenever needed.
+
+Design Patterns:
+1.Single Design Pattern ->Parking lot system since there is one shared instance
+2.Factory Pattern -> for different spots for large,small, mortorcycle, handicapped
+3.Observer Pattern-> to update the display board on each parking floor whenever a vehicle parks or leaves a spot.
+The display board will observe changes in the parking spot availability and update its state accordingly.
+4.Strategy Pattern: Use the Strategy pattern to implement the parking fee calculation algorithm. Create different strategies for calculating parking fees based on the parking duration.
+
+1 parking system has list of floors
+Each floor has parking spots
+Each spot is accociated with spot id and spot type
+
+Note: Revise how the Parking floor is implementing the factory pattern
+
+Ref:
+https://lldcoding.com/design-lld-a-parking-lot-machine-coding-interview
+
+
+TODO:
+Composite Pattern: Implement the Composite pattern to represent the parking lot structure, where a parking lot can contain multiple floors, and each floor can contain multiple parking spots.
+State Pattern: Utilize the State pattern to manage the state of each parking spot (e.g., occupied, vacant, reserved) and transition between states based on vehicle parking or leaving.

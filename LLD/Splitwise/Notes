@@ -1,0 +1,54 @@
+Each Group has multiple users
+Each user can have multiple transactions
+
+
+Group Management:
+Create Group
+Add/Remove Members
+Track Group Expenses
+
+Expense Management:
+Add Expense
+Split Expense (Equally, Unequally, by Percentage)
+View Balances
+
+Settlement:
+
+Settle Balances
+
+Singleton Pattern:
+-Use the Singleton pattern for managing the Splitwise instance to ensure
+there's only one instance of Splitwise in the system.
+-This ensures that a class has only one instance and provides
+a global point of access to that instance.
+
+Expense types: Equal, Unequal, Percentage
+1. Factory Design Pattern
+ExpenseFactory Interface; split()
+EqualExpenseFactory
+UnEqualExpenseFactory
+PercentageExpenseFactory
+2. Strategy Design Pattern
+ExpenseStrategy Interface; splitExpense()
+EqualExpenseStrategy
+UnEqualExpenseStrategy
+PercentageExpenseStrategy
+3. Observer Pattern - to notify users during changes in expenses/settlements
+4. Facade Pattern-to simplify interactions and provide a unified interface to the system.
+
+Using both the Factory and Strategy patterns in conjunction can offer several benefits,
+especially in scenarios where there is a need to create objects with varying behaviors or algorithms.
+Advantages:
+1. Separation of Concerns: The Factory pattern focuses on creating objects
+while the Strategy pattern focuses on encapsulating algorithms or behaviors.
+By using both patterns, you separate the concerns of object creation and behavior encapsulation,
+resulting in cleaner and more maintainable code.
+2. Flexibility: Combining both patterns provides flexibility in both object creation and behavior selection,
+making your system more adaptable to changing requirements.
+3. Scalability: As your system grows, using both patterns provides a scalable architecture
+that can accommodate new types of objects and behaviors efficiently.
+4. Enhanced Testability: Separating object creation and behavior encapsulation makes it easier
+to write unit tests for individual components. You can test object creation logic independently
+from behavior implementations, leading to more comprehensive and focused testing.
+
+Additional ref: https://lldcoding.com/design-lld-splitwise-application-machine-coding

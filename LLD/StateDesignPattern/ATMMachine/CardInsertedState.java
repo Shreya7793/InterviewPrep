@@ -15,7 +15,6 @@ public class CardInsertedState implements ATMState{
     public void enterPin(int pin) {
         System.out.println("Pin Entered");
         atmMachine.changeState(atmMachine.getPinInsertedState());
-        atmMachine.changeState(atmMachine.getPinInsertedState());
     }
 
     @Override
