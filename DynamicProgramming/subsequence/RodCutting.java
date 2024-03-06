@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.subsequence;
 /*
 Video Link: https://www.youtube.com/watch?v=mO8XpGoJwuo&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=25
 Problem Link: https://takeuforward.org/data-structure/rod-cutting-problem-dp-24/
@@ -9,7 +9,7 @@ TC: >O(2^N) as we are taking one index repeatedly
  */
 public class RodCutting {
     static int rodCuttingWithRecursion(int ind, int targetRodLength, int []prices){
-        if(ind==0){
+        if(ind==0){//since we are starting from n-1 , ind==0 will be there
             return targetRodLength*prices[0]; //at 0th index rod length is 1; therefore we need to cut it for 1 length, targerRodlength times
         }
         int pick=Integer.MIN_VALUE; //since we are looking for maximum value

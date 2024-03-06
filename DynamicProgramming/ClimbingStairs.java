@@ -8,13 +8,21 @@ Problem Statement: Count Ways To Reach The N-th Stairs
 * https://takeuforward.org/data-structure/dynamic-programming-climbing-stairs/
 * TC With recursion: O(2^n)
 TC with memoisation: O(n) ; n is the number of steps
+
+if(n==0) => means
+
  */
 public class ClimbingStairs {
 
-    static int climbingStairsWithRecursion(int n){
-        if(n<=1)
-            return 1;
-        return climbingStairsWithRecursion(n-1) + climbingStairsWithRecursion(n-2);
+    static int climbingStairsWithRecursion(int ind){
+        if(ind<=1)
+            return 1; // Base case: There's only one way to reach 0th or 1st stair
+        //do all possible stuff on the index
+        int stepOne=climbingStairsWithRecursion(ind-1);
+        int stepTwo=climbingStairsWithRecursion(ind-2);
+
+        // Recursive case: Number of ways to reach nth stair is sum of ways to reach (n-1)th and (n-2)th stair
+        return stepOne + stepTwo;
     }
     static int climbingStairsWithMemoisation(int ind, int []dp){
         if(ind<1)

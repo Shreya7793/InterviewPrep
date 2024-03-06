@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.strings;
 
 import java.util.Arrays;
 
@@ -16,11 +16,13 @@ Tabular format:O(N*M)
  */
 public class LongestCommonSubsequence {
      static int lcsLengthWithRecursion(String str1, String str2, int ind1, int ind2){
-         if(ind1<0 || ind2<0)
+         if(ind1<0 || ind2<0) //If it's the end of the string then the lcs is -
              return 0 ;
+         //This block will be executed only when the characters are match
          if(str1.charAt(ind1)==str2.charAt(ind2))
-            return 1+ lcsLengthWithRecursion(str1,str2, ind1-1, ind2-1);
-        return Math.max(lcsLengthWithRecursion(str1,str2, ind1-1, ind2),lcsLengthWithRecursion(str1,str2, ind1, ind2-1));
+            return 1+ lcsLengthWithRecursion(str1,str2, ind1-1, ind2-1);//if its a match, then check next index for both
+         //Not match- take the max of next index
+        return 0+Math.max(lcsLengthWithRecursion(str1,str2, ind1-1, ind2),lcsLengthWithRecursion(str1,str2, ind1, ind2-1));
      }
     static String lcsStringWithRecursion(String str1, String str2, int ind1, int ind2){
         if(ind1<0 || ind2<0)
@@ -31,7 +33,7 @@ public class LongestCommonSubsequence {
         String lcs1=lcsStringWithRecursion(str1,str2, ind1-1, ind2);
         String lcs2=lcsStringWithRecursion(str1,str2, ind1, ind2-1);
 
-        return lcs1.length()>lcs2.length()?lcs1:lcs2;
+        return lcs1.length()>lcs2.length()?lcs1:lcs2; //whichever has greater length
     }
     static int lcsLengthWithMemoisation(String str1, String str2, int ind1, int ind2, int [][]dp){
         if(ind1<0 || ind2<0)

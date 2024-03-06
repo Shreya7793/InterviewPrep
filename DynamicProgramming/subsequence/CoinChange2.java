@@ -1,5 +1,8 @@
-package DynamicProgramming;
+package DynamicProgramming.subsequence;
 /*
+We are given an array Arr with N distinct coins and a target.
+We have an infinite supply of each coin denomination.
+We need to find the number of ways we sum up the coin values to give us the target.
 Problem Link: https://takeuforward.org/data-structure/coin-change-2-dp-22/
 Video Link: https://www.youtube.com/watch?v=HgyouUi11zk&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=23
  */

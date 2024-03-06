@@ -1,0 +1,5 @@
+Uses:
+
+insert(word):To insert a word
+search(word): To check if String word is present or not.
+startsWith(word): To check if there is any string in the Trie that starts with the given prefix string "word"

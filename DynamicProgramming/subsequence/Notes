@@ -1,0 +1,4 @@
+dp[ind][target] == 0 ? false : true
+int dp[ind][target] = notTaken || taken ? 1 : 0;
+
+We have two cases in all array problems on subsequences: pick / notpick

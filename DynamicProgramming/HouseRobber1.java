@@ -23,10 +23,13 @@ Reason: We are using an external array of size ‘n+1’.
 public class HouseRobber1 {
 
     static int houseRobberWithRecursion(int ind, int []arr){
-        if(ind==0)
-            return ind;
-        if(ind<0)
+        //base case
+        if(ind==0) //if we have reached here means the adacent element has not be chosen so return the value at the index
+            return arr[ind];
+        if(ind<0) // If the index is negative, there are no elements left to consider.
             return 0;
+        //if we are at ind, we have two options-pick ind or not pick ind
+        //in case we pick, we cannot pick the adacent elem in the next recursion call
         int pick = arr[ind] + houseRobberWithRecursion(ind-2, arr);
         int notPick = 0 + houseRobberWithRecursion(ind-1, arr);
 

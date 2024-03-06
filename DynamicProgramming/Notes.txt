@@ -1,11 +1,38 @@
+How to Identify a DP problem?
+
+When we see a problem, it is very important to identify it as a dynamic programming problem. Generally (but not limited to) if the problem statement asks for the following:
+
+-Count the total number of ways
+-Given multiple ways of doing a task, which way will give the minimum or the maximum output.
+We can try to apply recursion. Once we get the recursive solution, we can go ahead to convert it to a dynamic programming one.
+
+Steps To Solve The Problem After Identification
+
+Once the problem has been identified, the following three steps comes handy in solving the problem:
+
+-Try to represent the problem in terms of indexes.
+-Try all possible choices/ways at every index according to the problem statement.
+-If the question states:
+Count all the ways – return sum of all choices/ways.
+Find maximum/minimum- return the choice/way with maximum/minimum output.
+
+1.Try to represent the problem in terms of index.
+2.Do all possible stuff on that index according to the problem statement
+3.If Question says count all ways, then sum all ways -> count all ways by returning 1 in the base case
+4.If Question says find min, then min(all possible ways)
+5.If Question says find min, then max(all possible ways)
+
 1. In all DP problems on subsequences -> we'll have two ways : take & not take
+Eg: Min. of of coins required to get target
+
 
 2. In problems which has infinite supplies(can be used any number of times)
 eg coin ; do not reduce the index in pick/take situation.
 
-3.How to think of base case?
-A. Since we are writing the recursion from n-1 to 0
-We write the base case for ind==0
+3.How to think of BASE CASE?
+A. Since we are writing the recursion from n-1 to 0, We always write the base case for ind==0
+Tip: f(ind,target) -> first think about target and then think about ind
+
 
 4. To find all possible ways.
 return (way1) + (way2) + ... => sum of all ways

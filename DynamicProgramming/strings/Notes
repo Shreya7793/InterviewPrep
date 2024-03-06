@@ -1,0 +1,13 @@
+1. what is a subsequence of a string?
+A subsequence of a string is a list of characters of the string where some characters are deleted ( or not deleted at all)
+and they should be in the same order in the subsequence as in the original string.
+
+2. What is a substring?
+A substring of a string is a subsequence in which all the characters are consecutive.
+Given two strings, we need to find the longest common substring.
+
+3. For a string of length n, the number of subsequences will be 2^n.
+
+4. Express the recurrence relation in terms of two index whenever we are dealing couple of strings.
+
+5. In string problems, we have two case : match/notmatch

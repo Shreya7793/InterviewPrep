@@ -1,0 +1,15 @@
+Functional Requirements:
+
+
+
+Payment Processing:
+Users should be able to add payment methods securely.
+Users should be able to make payments for event bookings.
+The system should support various payment options such as credit/debit cards, net banking, wallets, etc.
+
+Notifications:
+-Users should receive email or SMS notifications for booking confirmations, cancellations, event reminders, etc.
+-Users should be able to opt-in or opt-out of notifications.
+
+
+Non-functional Requirements
