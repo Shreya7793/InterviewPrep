@@ -3,6 +3,10 @@ package Arrays;
 import java.util.Arrays;
 
 /*
+Remove Duplicates from Sorted Array I
+Using Set Approach. Set stores in ascending order
+TC:set insetion for every element take NlogN
+
 Remove Duplicates from Sorted Array II
 Problem Link: https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/?envType=study-plan-v2&envId=top-interview-150
 Problem Statement: at most 2 duplicates in a sorted order

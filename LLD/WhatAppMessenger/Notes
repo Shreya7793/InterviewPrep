@@ -1,0 +1,68 @@
+Ref: https://lldcoding.com/design-lld-whatsapp-messenger-machine-coding
+
+Functional Requirements:
+- User Registration: Users should be able to create accounts, log in, and
+- Messaging: Users should be able to send text messages, images, videos, documents, and voice messages to individuals or groups.
+- Real-time Messaging/Private Messaging: Users should be able to send and receive text messages in real-time 1:1 communication.
+- Group Chat: The system should support group chats, allowing multiple users to participate in a single conversation
+- Presence Status: online/offline
+- Push Notifications: Users should receive push notifications for new messages even when the app is in the background
+
+Non-Functional Requirements ()
+- Scalabilty: The system should be able to handle a large number of concurrent users and messages without significant
+degradation in performance.
+- Performance: Users should have real-time chat experience with minimum latency
+- Consistency: Our system should be highly consistent; users should be able to see the same chat history on all
+               their devices.
+- Availability: Messenger’s high availability is desirable; we can tolerate lower availability in the interest of
+               consistency
+- Data Storage- User data should be stored securely and compliant with relevant data protection regulations,
+with regular backups to prevent data loss.
+
+1.User
+String userID
+String Username
+String PhoneNumber
+String Password
+
+2.Message
+String MessageId
+List<User> Receivers
+User sender
+String Content
+boolean isRead
+boolean isDelivered
+LocalDateTime timestamp
+
+3. Group
+String groupId
+String messageId
+String userId
+string Content
+LocalDateTime timestamp
+
+Design Patterns:
+
+1. MVC Pattern: he MVC pattern can be used to separate the messenger app into three components:
+the model (data and business logic), the view (user interface), and
+the controller (handles user interactions and manages the flow of data).
+Creational Design Pattern:
+1. Singleton Pattern: To ensure that we have once instance of
+Authentication manager or message dispatcher(MessageManager)
+2. Factory Pattern: To create instance of different msg types-(text,image,video) without exposing the creation logic
+
+Behavioral Design Pattern:
+1. Observer Pattern: To notify users about new messages(to prevent tight coupling between sender and receiver)
+2. Strategy Pattern: To encapsulate interchangeable algo like Authentication strategies
+3. State Pattern: To Manage different state of message interactions. Eg. Composing, Sending, Deleting
+
+Structural Pattern:
+1. Decorator Pattern: To add additional features or behaviors to the messages based on different criteria. Eg. Message encryption
+2. Proxy Pattern: To handle communication between the application and the message server,
+providing a level of indirection and encapsulation for network operations
+
+The ChatServerProxy class acts as a proxy between the clients and the actual ChatServer,
+providing a level of indirection for network operations.
+The LoadBalancer class handles the distribution of incoming user requests across multiple chat servers
+to handle the high load of concurrent users.
+PresenceStraregy-> online/offline;

@@ -1,0 +1,18 @@
+https://lldcoding.com/design-lld-inventory-management-system-machine-coding
+
+Functional Requirements:
+1. User Management
+- User should be able to register, login
+- User should be able to view and update their profiles
+2. Product Management
+- Users should be able to add, edit and delete products
+3. Inventory Management
+- Users should be able to track the quantity of products in stock
+- Users should receive alerts when products are back in stock
+4. Order Management
+- Users should be able to create, view, edit orders
+- Users should be able to track the status of the order
+5. Payment Management
+- Users should be able to choose their mode of payment
+
+Non-Functional Requirements:
