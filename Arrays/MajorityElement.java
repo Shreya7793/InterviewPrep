@@ -6,6 +6,10 @@ import java.util.Map;
 /*
 Problem Link: https://leetcode.com/problems/majority-element/description/?envType=study-plan-v2&envId=top-interview-150
 Solution Ref:  https://takeuforward.org/data-structure/find-the-majority-element-that-occurs-more-than-n-2-times/
+Brute Force: to count the appearence of every elemnent and check if the count>n/2
+TC: O(N^2)
+Optimised: Using Hashmap-> extra space
+Moore's algorithm: https://www.youtube.com/watch?v=X0G5jEcvroo
  */
 public class MajorityElement {
     public static int majorityElement(int[] nums) {
@@ -23,8 +27,38 @@ public class MajorityElement {
         }
         return -1;
     }
+    //Using Moore's Voting Algorithm
+    public static int majorityElementMooreAlgo(int[] nums) {
+        int elem=nums[0];
+        int count=1;
+        //Moore's Algo
+        for(int i=1;i<nums.length;i++) {
+            if(nums[i]==elem) {
+                ++count;
+            }
+            else
+            {
+                if(count>0)
+                    --count;
+                else
+                    elem=nums[i];
+            }
+        }
+        //check if the stored element is the majority element
+        int elemCount=0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]==elem)
+                ++elemCount;
+        }
+        if(elemCount>nums.length/2)
+            return elem;
+        else
+            return -1;
+    }
     public static void main(String []args){
         int []nums={2,2,1,1,1,2,2};
         System.out.println("Majority Element:"+majorityElement(nums));
+        System.out.println("Using Moore's Algorithm!");
+        System.out.println("Majority Element:"+majorityElementMooreAlgo(nums));
     }
 }

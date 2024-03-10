@@ -1,15 +1,26 @@
 Functional Requirements:
+- Be able to list the cities where cinemas are situated
+- Once the user selects city, the service should be able to display the movies selected in that particular city
+- Once a user selects a movie, the service should be able to display the cinemas running the movie and available show times
+- The user should be able to distinguish the booked and unbooked seats
+- The user should be able to book the seats
+- Customers are served in first-come first serve manner
 
+Non-functional Requirements:
+- The system would need to be highly concurrent.
+There will be multiple booking requests for the same seat at any particular point in time.
+The service should handle this gracefully and fairly.
+- The core thing of the service is ticket booking, which means financial transactions.
+This means that the system should be secure and the database ACID compliant.
 
-
-Payment Processing:
+Payment Processing: - Strategy Design Pattern
 Users should be able to add payment methods securely.
 Users should be able to make payments for event bookings.
 The system should support various payment options such as credit/debit cards, net banking, wallets, etc.
 
-Notifications:
+Notifications: - Observer Design Pattern
 -Users should receive email or SMS notifications for booking confirmations, cancellations, event reminders, etc.
 -Users should be able to opt-in or opt-out of notifications.
 
 
-Non-functional Requirements
+

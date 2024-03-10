@@ -1,4 +1,4 @@
-1. Full BT: has 0 or 2 childeren
+1. Full BT: has 0 or 2 children
 2. Complete BT:
 A complete binary tree is a binary tree in which every level, except possibly the last, is completely filled,
 and all nodes are as far left as possible.

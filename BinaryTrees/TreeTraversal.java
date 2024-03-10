@@ -37,21 +37,22 @@ public class TreeTraversal {
 
     /*
     Queue Operations:
-    offer(): Adds an element to the end of the queue if it is possible to do so immediately without violating capacity restrictions. Returns true upon success and false if the element cannot be added.
+    offer(): Adds an element to the end of the queue if it is possible to do so immediately without violating capacity restrictions.
+    Returns true upon success and false if the element cannot be added.
     peek(): Retrieves, but does not remove, the head of the queue, or returns null if the queue is empty.
     poll(): Retrieves and removes the head of the queue, or returns null if the queue is empty.
      */
-    static ArrayList<ArrayList<Integer>> levelOrder(TreeNode node){
+    static List<List<Integer>> levelOrder(TreeNode node){ //BFS
         Queue<TreeNode> queue = new LinkedList<>();
 
-        ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+        List<List<Integer>> result = new ArrayList<>();
         if(node==null)
             return result; //return empty list if the tree is empty
 
         queue.offer(node);
         while(!queue.isEmpty()){
             int levelSize= queue.size();
-            ArrayList<Integer> levelNodes = new ArrayList<>();
+            List<Integer> levelNodes = new ArrayList<>();
             //Check if the front element has left child, if yes then add the left child to the queue.
             for(int i=0;i<levelSize;i++){
                 TreeNode currentNode=queue.poll();
@@ -85,7 +86,7 @@ public class TreeTraversal {
         System.out.println("InOrder Traversal: ");
         inOrder(root);
         System.out.println("Level-Order Traversal: ");
-        for (ArrayList<Integer> level : levelOrder(root)) {
+        for (List<Integer> level : levelOrder(root)) {
             for (int data : level) {
                 System.out.print(data + " ");
             }

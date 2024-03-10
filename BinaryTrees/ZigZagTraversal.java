@@ -8,7 +8,7 @@ import java.util.Queue;
 /*
 Problem Link: https://takeuforward.org/data-structure/top-view-of-a-binary-tree/
 Video Link: https://www.youtube.com/watch?v=3OXWEdlIGl4&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&index=20
-Hint: use level-order travesal with a flag
+Hint: use level-order traversal with a flag
 flag=0 => L->R
 flag=1 => R->L
        1

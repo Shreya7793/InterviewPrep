@@ -18,6 +18,7 @@ public class SubArrayProductLessThanK {
                     product /= nums[left];
                     left++;
                 }
+            //Whenever we are expanding the window for the next loop, we add the element, that's why +1 in the expression
             count += right - left + 1;
         }
             return count;
