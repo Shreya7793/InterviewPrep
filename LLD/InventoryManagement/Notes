@@ -16,3 +16,34 @@ Functional Requirements:
 - Users should be able to choose their mode of payment
 
 Non-Functional Requirements:
+
+
+1.Customer
+customerId;
+customerName;
+address;
+email;
+phoneNum;
+
+2.Order
+orderId;
+Map<Product, Integer>items;
+Customer customer;
+LocalDateTime createAt;
+OrderStatus orderStatus;
+
+3.Product
+UUID productId;
+productName;
+description;
+price;
+availableUnits;
+
+Customer ->
+checkAvailibility
+placeOrder()
+
+ShoppingCart->
+addItem
+removeItem
+calculatePrice

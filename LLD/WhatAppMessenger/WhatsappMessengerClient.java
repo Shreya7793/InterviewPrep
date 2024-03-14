@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WhatsappMessenger {
+public class WhatsappMessengerClient {
     public static void main(String []args){
         // textMessage = MessageFactory.createMessage(MessageFactory.MessageType.TEXT, messageId, receivers, sender, content, timestamp, isRead, isDelivered);
         // Create users

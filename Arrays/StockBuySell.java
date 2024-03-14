@@ -37,8 +37,20 @@ public class StockBuySell {
         }
         return maxProfit;
     }
+    //Uses DP
+    static int maxProfitUsingDP(int nums[]){
+        int minBuyPrice=nums[0]; //initial buy price
+        int profit=0; //initial profit - buy at the same day , sell at the same day=> no profit
+        for(int i=1;i<nums.length;i++){
+            int cost=nums[i]-minBuyPrice; //Sell-buy
+            profit=Math.max(profit,cost);
+            minBuyPrice=Math.min(minBuyPrice,nums[i]); //update the buy price by min
+        }
+        return profit;
+    }
     public static void main(String []args){
         int []nums={3,1,4,8,7,2,5}; //Max Profit is 7
-        System.out.println("maxProfitApproach1"+maxProfitApproach1(nums));
+        System.out.println("maxProfitApproach1="+maxProfitApproach1(nums));
+        System.out.println("maxProfitUsingDP="+maxProfitUsingDP(nums));
     }
 }
