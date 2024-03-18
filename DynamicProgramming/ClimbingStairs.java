@@ -24,14 +24,14 @@ public class ClimbingStairs {
         // Recursive case: Number of ways to reach nth stair is sum of ways to reach (n-1)th and (n-2)th stair
         return stepOne + stepTwo;
     }
-    static int climbingStairsWithMemoisation(int ind, int []dp){
+    static int climbingStairsWithDP(int ind, int []dp){
         if(ind<1)
             return 1;
         if(dp[ind]!=-1)
             return dp[ind];
-        return dp[ind]=climbingStairsWithMemoisation(ind-1, dp) + climbingStairsWithMemoisation(ind-2, dp);
+        return dp[ind]=climbingStairsWithDP(ind-1, dp) + climbingStairsWithDP(ind-2, dp);
     }
-    static int climbingStairs(int n){
+    static int climbingStairsWithMemoisation(int n){
         if (n<=1) //Base case: 0 or 1 step can be climbed in 1 way
             return 1;
         int []dp=new int[n+1];
@@ -44,10 +44,11 @@ public class ClimbingStairs {
     }
     public static void main(String args[]){
         int n=3;
-        int []dp=new int[n];
+        int []dp=new int[n+1]; //in dp it's common to consider the array size as n+1
+        //the base case or initial condition of the problem is stored at index 0 of the array
         Arrays.fill(dp, -1);
         System.out.println("No. of ways to climb n steps="+climbingStairsWithRecursion(n));
-        System.out.println("No. of ways to climb n steps="+climbingStairsWithMemoisation(n-1, dp));
-        System.out.println("No. of ways to climb n steps="+climbingStairs(n));
+        System.out.println("No. of ways to climb n steps="+climbingStairsWithDP(n-1, dp));
+        System.out.println("No. of ways to climb n steps="+climbingStairsWithMemoisation(n));
     }
 }

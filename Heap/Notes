@@ -1,0 +1,7 @@
+Use Heap when
+1. We have to find 'most frequent'
+
+Question types:
+1. Reorganise String -> need most frequent character
+2. Min cycles required to finish task with cool off period.-> need to run the most frequent occuring task first
+3. Minimum no. of meeting rooms required-> interval+minHeap of end time
