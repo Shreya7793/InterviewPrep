@@ -1,5 +1,7 @@
 package Arrays;
-
+/*
+Video Link: https://www.youtube.com/watch?v=hnswaLJvr6g
+ */
 public class MaxProdInSubArray {
     public static int maxProductSubArray(int []nums){
         int prefixProd=1;

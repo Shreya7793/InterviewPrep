@@ -13,5 +13,6 @@ public class ThreadDemo extends Thread{
     public static void main(String []args){
         ThreadDemo threadDemo=new ThreadDemo();
         new Thread(threadDemo).start();
+        System.gc();
     }
 }

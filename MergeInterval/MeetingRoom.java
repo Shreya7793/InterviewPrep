@@ -5,7 +5,8 @@ import java.util.Arrays;
 /*
 Leetcode link:https://leetcode.com/problems/meeting-rooms/description/
 Video Link: https://www.youtube.com/watch?v=PaJxqZVPhbg
-Given an array of meeting time intervals where intervals[i] = [starti, endi], determine if a person could attend all meetings.
+Given an array of meeting time intervals where intervals[i] = [starti, endi],
+ determine if a person could attend all meetings.
 
 Example 1:
 Input: intervals = [[0,30],[5,10],[15,20]]

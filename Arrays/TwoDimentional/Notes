@@ -1,0 +1,2 @@
+int n = mat.length; // no. of rows
+int m = mat[0].length; // no. of columns

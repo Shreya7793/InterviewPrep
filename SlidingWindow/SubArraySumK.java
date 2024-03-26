@@ -21,7 +21,7 @@ The following sum takes care of 4 problems' patterns:
  */
 //TODO: use prefix sum
 public class SubArraySumK {
-    static int longestSubArrSumK(int []nums, int sum){
+    static int longestSubArrSumK(int []nums, int target){
         Map <Integer,Integer>prefixsumCntMap = new HashMap<>();
         int currSum=0;
         int start=0,end=0;
@@ -30,9 +30,9 @@ public class SubArraySumK {
         int count=0; //To count number of subarray
         for(int i=0;i<nums.length;i++){
             currSum += nums[i];
-           //To handle edge case where sum is same from 0th index
-            //Eg: {0,0,0,4} sum=4 => longest subarray would be of size 4
-            if(currSum-sum==0){
+           //To handle edge case where target is same from 0th index
+            //Eg: {0,0,0,4} target=4 => longest subarray would be of size 4
+            if(currSum-target==0){
                 start=0;
                 end=i;
                 maxLen=Math.max(maxLen,end-start+1);
@@ -40,8 +40,8 @@ public class SubArraySumK {
                 ++count;
                 break;
             }
-            else if(prefixsumCntMap.containsKey(currSum-sum)){
-                start=prefixsumCntMap.get(currSum-sum)+1;
+            else if(prefixsumCntMap.containsKey(currSum-target)){
+                start=prefixsumCntMap.get(currSum-target)+1;
                 end=i;
                 maxLen=Math.max(maxLen,end-start+1);
                 minLen=Math.min(minLen,end-start+1);
@@ -57,8 +57,9 @@ public class SubArraySumK {
     }
     public static void main(String []args){
         int []nums={0,0, 4, 1,0, 4};
-        nums=new int[]{1,2,-2,4,-4};
-        int sum=0;
+        nums=new int[]{1,2,-2,0,4,-4};
+        nums=new int[]{1,0,0,0,0,2,2,0,4,-4};
+        int sum=4;
         System.out.println("No. of subarray with sum k="+longestSubArrSumK(nums,sum));
     }
 }

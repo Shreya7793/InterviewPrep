@@ -1,0 +1,4 @@
+1. First step is to sort of the array based on their start time
+Arrays.sort(intervals,(a,b)->a[0]-b[0]);
+2. Meetings overlap Condition:
+end(last Interval) > start(current Interval)

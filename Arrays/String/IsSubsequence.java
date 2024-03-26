@@ -1,7 +1,9 @@
 package Arrays.String;
 
 import java.util.Arrays;
-
+/*
+Subsequence: can be non-contiguous
+ */
 public class IsSubsequence {
     public static boolean isSubsequence(String s, String t) {
         int sPointer=0, tPointer=0;

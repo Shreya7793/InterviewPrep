@@ -11,7 +11,7 @@ Input: tasks = ["A","A","A","B","B","B"], n = 2
 Output: 8
 Explanation: A possible sequence is: A -> B -> idle -> A -> B -> idle -> A -> B.
 Video Solution: https://www.youtube.com/watch?v=ySTQCRya6B0
-LeetCode Link: https://leetcode.com/problems/task-scheduler/submissions/1204712954/
+LeetCode Link: https://leetcode.com/problems/task-scheduler/description/
 Hint: You want to run the most frequently occurring task first
  */
 public class TaskScheduler {
@@ -48,6 +48,7 @@ public class TaskScheduler {
     }
     public static void main(String []args){
         char []tasks={'A','A','A','B','B','B'};
+        tasks = new char[]{'A','C','A','B','D','B'};
         int n=2;
         System.out.println(leastInterval(tasks,n));
     }

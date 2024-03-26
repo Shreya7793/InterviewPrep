@@ -46,7 +46,7 @@ public class ReorganiseString {
                 charFreqMap.put(current,charFreqMap.get(current)-1);
                 charFreqMap.put(next,charFreqMap.get(next)-1);
 
-                //put the chars back to heap
+                //put the popped chars i.e current and next back to heap
                 if(charFreqMap.get(current)>0)
                     maxHeap.add(current);
 

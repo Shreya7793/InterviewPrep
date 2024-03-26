@@ -27,7 +27,7 @@ public class LargestSubarrayZeroSum {
         int len=arr.length;
         for(int i=0;i<len;i++){
             sum += arr[i];
-            if(sum==0){
+            if(sum==target){
                 maxLen = i+1;
             }else{
                 if(prefixSumIndexMap.get(sum)!=null){
@@ -39,8 +39,8 @@ public class LargestSubarrayZeroSum {
         return maxLen==Integer.MIN_VALUE?0:maxLen;
     }
     public static void main(String []args){
-        int []nums={1,2, -2, 4, -4};
-        int target=4;
+        int []nums={1,0,2, -2, 4, 0, -4};
+        int target=0;
         System.out.println("Minimum Size Subarray Sum:"+largestSubarrayZeroSum(target, nums));
     }
 }

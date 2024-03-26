@@ -24,6 +24,8 @@ public class MergeInterval {
         for(int i=1;i<intervals.length;i++){ //starting from next interval as we already added the first interval to list
             int []currentInterval = intervals[i];
             int []lastMergerInterval = result.get(result.size()-1);
+            //lastMergerInterval references to the last element in result list
+            //Hence, Updating it would update the result also
 
             int lastEnd=lastMergerInterval[1]; //end of last merged interval
             int start=currentInterval[0]; //start of current interval
@@ -36,7 +38,6 @@ public class MergeInterval {
         }
         return result.toArray(new int[result.size()][]);
     }
-
     public static void main(String []args){
         int[][] intervals ={{1, 3}, {2, 6}, {8, 10}, {15, 18}};
         System.out.println("Original intervals: " + Arrays.deepToString(intervals));

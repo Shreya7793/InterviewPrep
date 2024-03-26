@@ -7,7 +7,7 @@ import java.util.Map;
 
 /*
 Brute approach is s*words arr length*average length of each word in words
-Optimised Apprach:
+Optimised Approach:
 1. Create a char,index list map
 2. Check for every word if its a subsequence
 3. Keep a track of the prevIndex
@@ -16,7 +16,7 @@ Optimised Apprach:
 Time Complexity:
 building the map takes O(n) time, where n is the length of the string s. Each insertion is O(1)
 The binary search takes O(logm) time, where m is the number of indices in the indexList for a particular character.
-For each word we are calling isSubquence -> Binary Search=> k is the average length of word then klogm
+For each word we are calling isSubsequence -> Binary Search=> k is the average length of word then klogm
  */
 public class NoOfMatchingSubsequence {
     static int numMatchingSubseq(String s, String[] words) {

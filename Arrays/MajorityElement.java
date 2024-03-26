@@ -6,6 +6,11 @@ import java.util.Map;
 /*
 Problem Link: https://leetcode.com/problems/majority-element/description/?envType=study-plan-v2&envId=top-interview-150
 Solution Ref:  https://takeuforward.org/data-structure/find-the-majority-element-that-occurs-more-than-n-2-times/
+The majority element is the element that appears more than ⌊n / 2⌋ times.
+You may assume that the majority element always exists in the array.
+Example 1:
+Input: nums = [3,2,3]
+Output: 3
 Brute Force: to count the appearence of every elemnent and check if the count>n/2
 TC: O(N^2)
 Optimised: Using Hashmap-> extra space
@@ -17,7 +22,7 @@ public class MajorityElement {
         Map<Integer,Integer> numFreqMap= new HashMap<>();
         for(int i=0;i<nums.length;i++){
             if(numFreqMap.containsKey(nums[i]))
-                numFreqMap.put(nums[i],numFreqMap.get(nums[i])+1);
+                numFreqMap.put(nums[i],numFreqMap.getOrDefault((nums[i]),0)+1);
             else
                 numFreqMap.put(nums[i],1);
         }
